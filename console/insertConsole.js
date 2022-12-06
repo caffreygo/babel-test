@@ -3,23 +3,12 @@ const traverse = require("@babel/traverse").default;
 const generate = require("@babel/generator").default;
 const types = require("@babel/types");
 const template = require("@babel/template").default;
+const fs = require("fs");
+const path = require("path");
 
-const sourceCode = `
-    console.log(1);
-
-    function func() {
-        console.info(2);
-    }
-
-    export default class Clazz {
-        say() {
-            console.debug(3);
-        }
-        render() {
-            return <div>{console.error(4)}</div>
-        }
-    }
-`;
+const sourceCode = fs.readFileSync(path.join(__dirname, "./sourceCode.js"), {
+  encoding: "utf8",
+});
 
 const ast = parser.parse(sourceCode, {
   sourceType: "unambiguous",
