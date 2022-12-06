@@ -5,6 +5,7 @@ const types = require("@babel/types");
 const fs = require("fs");
 const path = require("path");
 
+// parse 转 AST + traverse 遍历 AST + generate 生成代码
 const sourceCode = fs.readFileSync(path.join(__dirname, "./sourceCode.js"), {
   encoding: "utf8",
 });
