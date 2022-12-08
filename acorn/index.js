@@ -1,9 +1,9 @@
 const acorn = require("acorn");
-const guangKeywordPlugin = require('./jcKeywordPlugin');
+const jcKeywordPlugin = require('./jcKeywordPlugin');
 
 const Parser = acorn.Parser;
 
-const newParser = Parser.extend(guangKeywordPlugin);
+const newParser = Parser.extend(jcKeywordPlugin);
 
 var program = 
 `
