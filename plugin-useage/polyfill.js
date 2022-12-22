@@ -8,7 +8,7 @@ const { code, map } = babel.transformSync(sourceCode, {
   plugins: [],
   presets: [
     [
-      "@babel/env",
+      "@babel/preset-env",
       {
         useBuiltIns: "usage",
         targets: {
